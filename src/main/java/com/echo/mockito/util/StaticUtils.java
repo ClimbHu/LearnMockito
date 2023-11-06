@@ -13,7 +13,13 @@ public class StaticUtils {
 
     private StaticUtils() {}
 
-    //返回指定区间的 Integer List
+    /**
+     * @Title
+     * @Description 返回指定区间的 Integer List
+     * @param
+     * @return
+     * @throws
+     */
     public static List<Integer> range(int start, int end) {
         return IntStream.range(start, end).boxed().collect(Collectors.toList());
     }

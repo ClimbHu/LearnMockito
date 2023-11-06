@@ -6,6 +6,7 @@ package com.echo.mockito.entity;
  * @date 2022/3/28 15:32
  */
 public class SalesRep {
+
     private String repId;
 
     public SalesRep(String repId) {

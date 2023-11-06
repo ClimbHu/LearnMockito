@@ -32,14 +32,14 @@ class DemoTest {
         Random random = Mockito.mock(Random.class);
         System.out.println(random.nextInt());
         // 校验，该方法执行了一遍
-        Mockito.verify(random,Mockito.times(1)).nextInt();
+        Mockito.verify(random, Mockito.times(1)).nextInt();
         System.out.println("华丽的分割线--------------");
         // mock需要打桩，调用该方法后的返回值为100
         // mock 出来的对象需要打桩，对行为进行规范
         Mockito.when(random.nextInt()).thenReturn(100);
 
         // Mockito.when(demo.add(1,2)).thenReturn(3);
-        Assertions.assertEquals(100,random.nextInt());
+        Assertions.assertEquals(100, random.nextInt());
     }
 
     /**
@@ -52,8 +52,11 @@ class DemoTest {
         Assertions.assertEquals(3, demo.add(1, 2));
 
         // 真实模拟不需要打桩，会调用真实方法
-        Mockito.when(demo.add(1,2)).thenReturn(0);
+        Mockito.when(demo.add(1, 2)).thenReturn(0);
         Assertions.assertEquals(0, demo.add(1, 2));
+
+        Mockito.when(demo.add(1, 4)).thenCallRealMethod();
+        Assertions.assertEquals(5, demo.add(1, 4));
     }
 
     @AfterEach

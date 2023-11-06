@@ -15,6 +15,9 @@ import java.sql.SQLException;
 
 class RegistrationServiceImplTest {
 
+    /*
+     * @InjectMocks：将mock引入的对象UserDao、SaleDao注入到service中
+     */
     @InjectMocks
     @Spy
     private RegistrationServiceImpl registrationService;
@@ -25,6 +28,7 @@ class RegistrationServiceImplTest {
 
     @BeforeEach
     void setUp() {
+        // 开启
         MockitoAnnotations.openMocks(this);
     }
 
@@ -34,7 +38,7 @@ class RegistrationServiceImplTest {
         String phone = "15071271412";
         try {
             registrationService.register(name, phone);
-            Assertions.fail("这里会挂掉");
+            Assertions.fail("这里不会到，会挂掉");
         } catch (Exception e) {
             Assertions.assertTrue(e instanceof ValidationException);
         }

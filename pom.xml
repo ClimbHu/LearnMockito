@@ -31,6 +31,7 @@
 			<artifactId>junit-jupiter</artifactId>
 			<version>5.8.2</version>
 		</dependency>
+		<!-- 不能同时引用，会冲突-->
 		<!--        <dependency>-->
 		<!--            <groupId>org.mockito</groupId>-->
 		<!--            <artifactId>mockito-core</artifactId>-->

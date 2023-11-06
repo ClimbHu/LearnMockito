@@ -2,7 +2,7 @@
 
 [TOC]
 
-[笔记、代码来自](https://www.bilibili.com/video/BV15S4y1F7Xr/?spm_id_from=333.337.search-card.all.click&vd_source=6a52cb5584a27d15fef899709f53ef75)，感谢搞钱小王大佬！
+[笔记、代码、视频【推荐】来自B站UP搞钱小王](https://www.bilibili.com/video/BV15S4y1F7Xr/?spm_id_from=333.337.search-card.all.click&vd_source=6a52cb5584a27d15fef899709f53ef75)，感谢搞钱小王大佬！
 
 
 
@@ -151,7 +151,6 @@ class StaticUtilsTest {
             utilities.when(() -> StaticUtils.range(2, 6)).thenReturn(Arrays.asList(10, 11, 12));
             Assertions.assertTrue(StaticUtils.range(2, 6).contains(10));
         }
-
     }
 
     @Test
